@@ -27,25 +27,28 @@ while (salir != 0)
         break;
         case 2:
             Console.WriteLine("Ingrese cuanto quiere Restar: ");
-            num1 = Console.Read();
+            num1 = int.Parse(Console.ReadLine());
             item.Resultado = item.Restar(num1);
         break;
         case 3:
             Console.WriteLine("Ingrese por cuanto lo quiere multiplicar: ");
-            num1 = Console.Read();
+            num1 = int.Parse(Console.ReadLine());
             item.Resultado = item.Producto(num1);
         break;
         case 4:
             Console.WriteLine("Ingrese por cuanto lo quiere dividir: ");
-            num1 = Console.Read();
+            num1 = int.Parse(Console.ReadLine());
             item.Resultado = item.Cociente(num1);
         break;
         case 5:
+            item.Resultado = item.limpiar();
         break;
     }
     Console.WriteLine("Ingrese (0) Para salir.");
     salir = int.Parse(Console.ReadLine());
 }
+
+Console.WriteLine("Resultado final: "+item.Resultado);
     
  
 
